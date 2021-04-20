@@ -59,6 +59,7 @@ function addBookDiv(number, title, author, pages, isRead) {
 
     if(isRead == true){
         readButton.classList.add("bookread")
+        totalread++
         updateStats()
     }
 
