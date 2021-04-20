@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+
+        <section id="glass">
+
+            <section id="dashboard">
+                <div id="user-details">
+                    <img src="images/user.png" class="profile-picture">
+                    <div id="username" class="user-name" contenteditable="true">Edit name</div>
+                    <div id="last-edit" class="last-edit" >User since: 09/08/2021</div>
+                </div>
+                
+                <div id="user-stats">
+                    <div class="number-books">
+                        <img src="images/books.png" class="icon">
+                        <h1 id="display-books"></h1>
+                        
+                    </div>
+                        
+                    <div class="books-read">
+                        <img src="images/completed.png" class="icon">
+                        <h1 id="display-read"></h1>
+                        
+                    </div>
+                    <div class="total-pages">
+                        <img src="images/pages.png" class="icon">
+                        <h1 id="display-pages"></h1>
+                        
+                    </div>
+                </div>
+
+                <div id="libary-controls">
+                    <div class="new-book">
+                        <img src="images/add.png" class="icon" onclick="openForm()">
+                        <h1>New book</h1>
+                    </div>
+                    <div class="clear-books">
+                        <img src="images/remove.png" class="icon" onclick="emptyLibrary()">
+                        <h1>Empty library</h1>
+                    </div>
+                    
+                </div>
+
+                <hr>
+            </section>
+    
+            <section id="library">
+                               
+                <div id="header">
+                    <h1>Book Collection</h1>
+                    <input type="search" id="search" name="search">
+                </div>
+
+                <div class="book-container" id="book-container">
+                    <hr>
+                </div>
+            </section>
+
+            
+
+            <section id="myForm" class="popup-form">
+                <form id="formObj"
+                class="form-container">
+                    <h1>Add book</h1>
+
+                    <hr>
+
+                    <label for="title"><b>Title</b></label>
+                    <input type="text" placeholder="Enter Title" name="title" id="title">
+
+                    <label for="author"><b>Author</b></label>
+                    <input type="text" placeholder="Enter Author Name" name="author" id="author">
+
+                    <label for="pages"><b>Pages</b></label>
+                    <input class="pages" type="number" placeholder="Enter Pages" name="pages" id="pages">
+
+                    <label for="isRead"><b>Read?</b></label>
+                    <input type="checkbox" name="isRead" id="isRead">
+
+                    <div>
+                        <button type="submit" id="submit" onclick="newBook()">Submit</button>
+                        <button type="submit" id="close" onclick="closeForm()">Close</button>   
+                    </div>
+                    
+
+                </form>
+                <div class="blur"></div>
+            </section>
+
+        </section>
+
+
+
+        
+
+
+
+    </main>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

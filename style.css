@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+main {
+    background: linear-gradient(to right top, #f0ba80, #fbe0c4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#glass {
+    display: flex;
+    height: 80vh;
+    width: 75%;
+    max-width: 1250px;
+    border-radius: 2rem;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+      backdrop-filter: blur(2rem);
+}
+
+/* Dashboard */
+
+#dashboard {
+    flex: 1;
+    border-radius: 2rem;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+    #user-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+        #user-details div {
+            margin: 0.3rem;
+        }
+
+        .user-name {
+            font-size: 2.5em;
+        }
+
+        .last-edit {
+            text-align: center;
+        }
+
+        .profile-picture {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        width: 7rem;
+        height: 7rem;
+        }
+
+    #user-stats {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        border: 2px solid rgba(221, 220, 220, 0.781);
+        background-color: rgba(255, 255, 255, 0.384);
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+
+        #user-stats > div {
+            max-width: 33%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        #user-stats > div > h1 {
+            font-size: 2rem;
+            background: linear-gradient(to right top, #eba861, #ebae6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        }
+
+        .icon {
+            background-color: rgba(255, 255, 255, 0.288);
+            margin-bottom: 10px;
+            width: 3rem;
+            height: 3rem;
+        }
+
+            .icon:hover {
+                transform: scale(1.2);
+                filter: brightness(115%);
+                cursor: pointer;
+            }
+
+    #libary-controls {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    #libary-controls > div {
+            max-width: 33%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+    
+        #libary-controls > div > img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        #libary-controls > div > h1 {
+            font-size: 1.1rem;
+        }
+
+hr {
+    width: 100%;
+}
+
+/* Book Zone */
+
+
+#library {
+    flex: 2;
+    border-radius: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+    #header {
+        margin: 2rem;
+        z-index: 2;
+    }
+        #header h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right top, #eba861, #ebae6d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        #header input {
+            width: 80%;
+            border: none;
+            border-radius: 10px;
+            height: 20px;
+            padding: 1rem;
+        }
+
+    .book-container {
+        margin: 2rem;
+        height: 60em;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-content: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+
+        .book {
+            border: 2px solid rgba(221, 220, 220, 0.781);
+            background-color: rgba(255, 255, 255, 0.877);
+            width: 45%;
+            min-height: 30%;
+            padding: 1rem;;
+            margin-right: 0.7rem;
+            margin-top: 1.5rem;
+            box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+            border-radius: 10px;
+            position: relative;
+        }
+
+            .title {
+                font-size: 1.5rem;
+                line-clamp: 2;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .author{
+                font-size: 1.2rem;
+                font-weight: 400;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .pages{
+                font-size: 1rem;
+                font-weight: 400;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .delete {
+                position: absolute;
+                bottom: 10px;
+                left: 50px;
+                height: 34px;
+                width: 34px;
+                border: none;
+                border-radius: 1rem;
+                background-color: #ccc;
+                color: white;
+                font-weight: 800;
+                padding: 5px 10px 5px 10px;
+            }
+
+                .delete:hover {
+                    background-color: rgba(216, 58, 58, 0.699);
+                    color: rgba(216, 58, 58, 0.699);
+                    cursor: pointer;
+                }
+            
+            .read {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                height: 34px;
+                width: 34px;
+                border: none;
+                border-radius: 1rem;
+                background-color: #ccc;
+                color: white;
+                font-weight: 800;
+                padding: 5px 10px 5px 10px;
+            }
+
+                .read:hover {
+                    background-color: rgba(58, 216, 71, 0.699);
+                    color: rgba(58, 216, 71, 0.699);
+                    cursor: pointer;
+                }
+
+                .bookread {
+                    background-color: rgba(58, 216, 71, 0.699);
+                    color: rgba(58, 216, 71, 0.699);
+                    color: white;
+                }
+
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: #f0ba8081;
+    z-index: 1;
+}
+
+#myForm {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    border: 2px solid rgba(221, 220, 220, 0.781);
+    background-color: rgba(255, 255, 255, 0.877);
+    border: 1px solid black;
+    position: absolute; 
+    left: 20%;
+    top: 20%;
+    padding: 3rem 4rem 3rem 4rem;
+    min-height: 50vh;
+    width: 60%;
+    min-width: 50%;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.form-container * {
+    margin-bottom: 10px;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+}
+
+.form-container input {
+    width: 75%;
+    height: 5%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid rgba(221, 220, 220, 0.781);
+}
+
+.form-container button {
+    padding: 1rem;
+    width: 35%;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(221, 220, 220, 0.781);
+    background-color: rgba(255, 255, 255, 0.877);
+    margin-right: 2rem;
+}
+
+#isRead {
+    height: 20px;
+}
+
+.form-container > div {
+    display: flex;
+    width: 100%;
+}
+
+#submit:hover {
+    background-color: rgba(58, 216, 71, 0.699);
+    cursor: pointer;
+}
+
+#close:hover {
+    background-color:rgba(216, 58, 58, 0.699);
+    cursor: pointer;
+}
+
+            
